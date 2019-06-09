@@ -13,7 +13,7 @@ class Anagram
         worked = anagrams.select do |test_word|
             check_word = test_word.split("").sort
             if my_word == check_word
-                test_word
+                true
             end
         end 
         return worked
