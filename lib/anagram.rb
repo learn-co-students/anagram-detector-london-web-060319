@@ -9,13 +9,12 @@ class Anagram
     end
 
     def match(anagrams)
-        my_word  = @word.split("").sort
-        worked = anagrams.select do |test_word|
-            check_word = test_word.split("").sort
-            if my_word == check_word
-                true
-            end
-        end 
-        return worked
+        anagrams.select { |test_word| @word.split("").sort == test_word.split("").sort }
+        # my_word  = @word.split("").sort
+        # worked = anagrams.select do |test_word|
+        #     check_word = test_word.split("").sort
+        #     my_word == check_word
+        # end 
+        # return worked
     end
 end
